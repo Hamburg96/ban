@@ -1,0 +1,562 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <title>班师学堂™ | 班师教育</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link type="text/css" href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'css/font-awesome.css' %}" rel="stylesheet"/>
+    {#        <link rel="stylesheet" type="text/css" href="/Content/bootstrap-select.css" />#}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/scrollbar.css' %}" />
+    <link type="text/css" href="{% static 'css/ban.css' %}" rel="stylesheet"/>
+    <link href="{% static 'images/favicon.png' %}" rel="Favicon" type="image/x-icon"/>
+    {#        <script src="/Scripts/Utils/messages.js" type="text/javascript"></script>#}
+    {#        <link href="/Content/kendo/kendo.common-bootstrap.min.css" rel="stylesheet"/>#}
+    {#        <link href="/Content/kendo/kendo.bootstrap.min.css" rel="stylesheet"/>#}
+    {#        <link href="/Content/kendo/kendo.rtl.min.css" rel="stylesheet"/>#}
+    {#        <link href="/Content/kendo/kendo.dataviz.min.css" rel="stylesheet"/>#}
+    {#        <link href="/Content/kendo/kendo.dataviz.bootstrap.min.css" rel="stylesheet"/>#}
+    <!--[if lt IE 9]><script src="js/modernizr.min.js" type="text/javascript"></script>
+    <![endif]-->
+    <meta property="og:title"
+          content="班师学堂™ | 班师教育"/>
+    <meta name="description" content="Home"/>
+    <meta property="og:description" content="Home"/>
+    <meta property="og:image" content="{% static '/images/logo2.png'%}"/>
+
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+</head>
+<body>
+
+<div id="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="header_area">
+                    <nav id="main-navigation" class="navbar" role="navigation">
+                        <div class="container">
+                            <div class="center_content">
+                                <div class="navbar-header ">
+                                    <button type="button" class="navbar-toggle"
+                                            data-toggle="collapse"
+                                            data-target="#main-navbar">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+
+                                    </button>
+                                    <div class="logo pull-left">
+                                        <a href="/">
+                                            <img src="{% static '/images/logo2.png'%}" alt="banshijiaoyu.com"/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="main-navbar"
+                                     class="collapse navbar-collapse">
+                                    <ul id="menu" class="nav navbar-nav main-navbar-nav header_right pull-right">
+                                        <li class="active">
+                                            <a href="{% url 'login' %}">登录</a>
+                                        </li>
+                                        <li>
+                                            <a id="signUpLink" data-toggle="modal" data-target="#myModal">免费试听</a>
+                                        </li>
+                                        <li><a href="{% url 'ContactUs' %}">联系我们</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="menu_holder"></div>
+    <div class='container '>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="home_banner_area">
+                        <div class="home_banner center_content text-center">
+                            <div class="home_banner_form">
+                                <div class="middle_info">
+                                    <h1> 曲径通幽处 禅房花木深</h1>
+                                    <h4>私人定制教学课程，<b>为你</b>快速提升成绩
+                                    </h4>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="learning_btn_area">
+                                                    <div class="learning_btn_box top center-block text-center">
+                                                        <a data-toggle="modal" data-target="#myModal" class="learning_btn">免费试听</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 banner-icons">
+                    <div class="icon_content_area">
+                        <div class="icon_content_holder center_content text-center">
+                            <div class="icon_content_box">
+                                <div class="icon_column pull-left">
+                                    <a>
+                                        <div class="icon_photo">
+                                            <img src="{% static 'images/teacher.png' %}" alt=""/></div>
+                                        <span><b>7位专职教师</b><br/>20余位特聘教师<br/>专业 用心</span>
+                                    </a>
+                                </div>
+                                <div class="icon_column pull-left">
+                                    <a>
+                                        <div class="icon_photo">
+                                            <img src="{% static 'images/calendar.png' %}" alt=""/></div>
+                                        <span><b>定制教学计划</b><br/>CT扫描式摸底<br/>精准 全面</span>
+                                    </a>
+                                </div>
+                                <div class="icon_column pull-left">
+                                    <a>
+                                        <div class="icon_photo">
+                                            <img src="{% static 'images/passed.png' %}" alt=""/></div>
+                                        <span><b>在你期望的时间内</b><br/>达成学习目标</span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="icon_content_area">
+                        <div class="icon_content_holder center_content text-center">
+                            <div class="icon_content_box">
+                                <div class="icon_column pull-left">
+                                    <a href='{% url 'login' %}'>
+                                        <div class="icon_photo">
+                                            <img src="{% static '/images/icon1.png'%}" alt=""/>
+                                        </div>
+                                        <span>数学</span>
+                                    </a>
+                                </div>
+                                <div class="icon_column pull-left">
+                                    <a href='{% url 'login' %}'>
+                                        <div class="icon_photo"><img src="{% static '/images/icon3.png'%}" alt=""/>
+                                        </div>
+                                        <span>物理</span>
+                                    </a>
+                                </div>
+                                <div class="icon_column pull-left">
+                                    <a href='{% url 'login' %}'>
+                                        <div class="icon_photo">
+                                            <img src="{% static '/images/icon11.png'%}" alt=""/>
+                                        </div>
+                                        <span>化学</span>
+                                    </a>
+                                </div>
+                                <div class="icon_column pull-left">
+                                    <a href='{% url 'login' %}'>
+                                        <div class="icon_photo"><img
+                                                src="{% static '/images/icon12.png'%}" alt=""/>
+                                        </div>
+                                        <span>英语</span>
+                                    </a>
+                                </div>
+                                <div class="icon_column pull-left">
+                                    <a href='{% url 'login' %}'>
+                                        <div class="icon_photo">
+                                            <img src="{% static '/images/icon14.png'%}" alt=""/>
+                                        </div>
+                                        <span>生物</span>
+                                    </a>
+                                </div>
+                                <div class="icon_column pull-left">
+                                    <a href='{% url 'login' %}'>
+                                        <div class="icon_photo">
+                                            <img src="{% static '/images/icon13.png'%}" alt=""/>
+                                        </div>
+                                        <span>语文</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container"
+             style="background-color: #f2f2f2;color: #231f20;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="gray_video_content" style="">
+                        <div id="main-carousel" class="carousel slide"
+                             data-ride="carousel" data-interval="8000"
+                             data-pause="">
+                            <div class="carousel-inner">
+                                <div class="item  active ">
+                                    <div class="gray_video"><img
+                                            class="CourseCarousel"
+                                            style="padding-right: 15px; float: left; border-radius:50%;"
+                                            data-username="100011977294345"
+                                            alt=" 李同学"
+                                            src="{% static 'images/touxiang1.jpg' %}"
+                                            width="140" height="140"
+                                            style="width: 140px; height: 140px;"/>
+                                    </div>
+                                    <div class="ReccomendationsArea">
+                                        <p>“ 个性化的辅导帮助我学到了很多知识，最后考的很好，每一个老师都超给力！”</p>
+                                        <br/>
+                                        <div class="name">- 李同学</div>
+                                        <br/>
+                                    </div>
+                                </div>
+                                <div class="item ">
+                                    <div class="gray_video"><img
+                                            class="CourseCarousel"
+                                            style="padding-right: 15px; float: left; border-radius:50%;"
+                                            data-username="100001540153625"
+                                            alt="张同学" width="140"
+                                            src="{% static 'images/touxiang2.jpg' %}"
+                                            height="140"
+                                            style="width: 140px; height: 140px;"/>
+                                    </div>
+                                    <div class="ReccomendationsArea">
+                                        <p>“ 个性化的定制学习使我考试时如鱼得水，每节课都是考点！ ”</p><br/>
+                                        <div class="name">-张同学</div>
+                                        <br/>
+                                    </div>
+
+                                </div>
+                                <div class="item ">
+                                    <div class="gray_video"><img
+                                            class="CourseCarousel"
+                                            style="padding-right: 15px; float: left; border-radius:50%;"
+                                            data-username="100003327470511"
+                                            alt=" 小赵" width="140"
+                                            src="{% static 'images/touxiang3.jpg' %}"
+                                            height="140"
+                                            style="width: 140px; height: 140px;"/>
+                                    </div>
+                                    <div class="ReccomendationsArea">
+                                        <p>“ 令人激动的教学，比起课堂的昏昏欲睡强太多了！ ”</p><br/>
+                                        <div class="name">- 小赵
+                                        </div>
+                                        <br/>
+
+                                    </div>
+
+                                </div>
+                                <div class="item ">
+                                    <div class="gray_video"><img
+                                            class="CourseCarousel"
+                                            style="padding-right: 15px; float: left; border-radius:50%;"
+                                            data-username="100001587861107"
+                                            alt="刘同学" width="140"
+                                            src="{% static 'images/touxiang4.jpg' %}"
+                                            height="140"
+                                            style="width: 140px; height: 140px;"/>
+                                    </div>
+                                    <div class="ReccomendationsArea">
+                                        <p>“ 这个课堂学到的知识简直是提分利器! ”</p><br/>
+                                        <div class="name">-刘同学
+                                        </div>
+                                        <br/>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+{#        <div class="container" style="display:none;">#}
+{#            <div class="row">#}
+{#                <div class="col-md-12">#}
+{#                    <div>#}
+{#                        <div class="content_holder center_content">#}
+{#                            <h2 class="text-center">Our Products</h2>#}
+{#                            <div class="product_holder">#}
+{#                                <div class="product_column pull-left text-center">#}
+{#                                    <h4>Video Courses</h4>#}
+{#                                    <div class="product_icon"><img#}
+{#                                            src="{% static '/images/icon7.png'%}" alt=""/>#}
+{#                                    </div>#}
+{#                                    <p>Access hundreds of lessons,<br> sample#}
+{#                                        problems, and solutions <br>to#}
+{#                                        supplement in-class learning by topic or#}
+{#                                        course</p>#}
+{#                                </div>#}
+{#                                <div class="product_column pull-right text-center">#}
+{#                                    <h4>Workbook*</h4>#}
+{#                                    <div class="product_icon"><img#}
+{#                                            src="{% static '/images/icon8.png'%}" alt=""/>#}
+{#                                    </div>#}
+{#                                    <p>Problems and exercises for your course,#}
+{#                                        <br>including answer key (solutions in#}
+{#                                        video) </p>#}
+{#                                    <small>*Excellent resource for exams!#}
+{#                                    </small>#}
+{#                                    <div class="product_btm">#}
+{#                                        <strong>FREE</strong>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="clearfix"></div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product_content_area">
+                        <div class="content_holder center_content">
+                            <h2 class="text-center">如何开始学习</h2>
+                            <div class="work_step_box text-center">
+                                <div class="work_step_column pull-left work_step_first">
+                                    <div class="work_step">
+                                        <img src="{% static '/images/item_icon1.png'%}" alt=""/></div>
+                                    <div class="step_bg">
+                                        <small class="img-circle">&nbsp;</small>
+                                    </div>
+                                    <span>想好要学的科目</span>
+                                </div>
+                                <div class="work_step_column pull-left">
+                                    <div class="work_step">
+                                        <img src="{% static '/images/item_icon2.png'%}" alt=""/></div>
+                                    <div class="step_bg">
+                                        <small class="img-circle">&nbsp;</small>
+                                    </div>
+                                    <span>找到离你最近的校区</span>
+                                </div>
+                                <div class="work_step_column pull-left">
+                                    <div class="work_step"><img src="{% static '/images/item_icon3.png'%}" alt=""/></div>
+                                    <div class="step_bg">
+                                        <small class="img-circle">&nbsp;</small>
+                                    </div>
+                                    <span>免费试听</span>
+                                </div>
+                                <div class="work_step_column work_step_last pull-left">
+                                    <div class="work_step"><img src="{% static '/images/item_icon4.png'%}" alt=""/></div>
+                                    <div class="step_bg">
+                                        <small class="img-circle">&nbsp;</small>
+                                    </div>
+                                    <span>报名开始学习</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="learning_btn_area bottom">
+                        <div class="learning_btn_box center-block text-center">
+                            <a data-toggle="modal" data-target="#myModal"
+                               class="learning_btn">免费试听</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="">
+                        <div class="content_holder center_content">
+                            <h2 class="text-center">我们是谁</h2>
+                            <div class="three_item_box">
+                                <ul class="text-center">
+                                    <li style="margin-left: 23px;">用心</li>
+                                    <li>经验</li>
+                                    <li>专业</li>
+                                </ul>
+                            </div>
+                            <div class="content_info text-center">
+                                <p style="text-align:left">
+                                    由两位授课10年以上名校毕业教师创办的，班师教育一直致力于为学生弥补课堂教育的差距，针对挑战梦想或者暂时失意的学生。
+                                    本着对教育的思考，随着经验的加深，为学生深度量身定制私有化课程，跳过所谓的“照本宣科”，从专业人士那里直接学习。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footer_area">
+                    <footer class="center-block">
+                        <div class="footer_menu pull-left">
+                            <div id="footer_area">
+                                <footer>
+                                    <div class="footer_column">
+                                        <h4>了解更多</h4>
+                                        <ul>
+                                            <li><a title="About Us" href="/home/about">关于我们</a></li>
+                                            <li><a title="Contact Us" href="/Home/ContactUs">联系我们</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer_column">
+                                        <h4>支持</h4>
+                                        <ul>
+                                            <li><a title="FAQ" href="/Home/Questions">FAQ</a></li>
+                                            <li><a title="Terms of Use" href="/Home/Terms">反馈</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer_column">
+                                        <h4>加入我们</h4>
+                                        <ul>
+                                            <li><a title="Careers" href="/Home/JoinUs">招聘</a></li>
+                                        </ul>
+                                    </div>
+
+                                </footer>
+                            </div>
+                        </div>
+
+                        <div class="footer_social pull-right">
+                            <a href=""
+                               target="_blank" class="pull-left"><img
+                                    src="{% static '/images/social1.png'%}" alt=""/></a>
+                            <a href=""
+                               target="_blank" class="pull-left"><img
+                                    src="{% static '/images/social2.png'%}" alt=""/></a>
+                            <a href=""
+                               class="pull-left" target="_blank"><img
+                                    src="{% static '/images/social3.png'%}" alt=""/></a>
+                            <a href=""
+                               target="_blank" class="pull-left"><img
+                                    src="{% static '/images/social4.png'%}" alt=""/></a>
+                        </div>
+
+                        <div class="pull-left col-md-12" style="color:#ffffff;">
+                            1-888-258-5449 | <a href="mailto:nfo@banshijiaoyu.com">info@banshijiaoyu.com</a>
+                            <div style="color:#ffffff;"class="footer_not_endorsed_note pull-right">
+                                *班师教育没有与任何学校或者在聘教师合作
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--[if !IE]><!-->
+<script src="{% static  'js/jquery-2.1.1.min.js'%}"></script>
+
+<!--<![endif]-->
+<!--[if gte IE 9]><!-->
+<script src="{% static  'js/jquery-2.1.1.min.js'%}"></script>
+
+<!--<![endif]-->
+<!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+<![endif]-->
+<script src="{% static  'jsBundles/jqueryUI' %}"></script>
+
+<script src="{% static  'js/bootstrap.min.js'%}"></script>
+
+<script src="{% static 'jsBundles/utils' %}"></script>
+
+<script src="{% static 'jsBundles/3rdParty' %}"></script>
+
+{#<script src="{% static '/js/jquery.signalR-2.1.1.min.js' %}"></script>#}
+
+{#<script src="/signalr/hubs"></script>#}
+
+{#<script src="{% static '/js/usersHub.js' %}"></script>#}
+
+{##}
+{#<script src="{% static '/js/jquery.slicknav.js' %}"></script>#}
+{##}
+{#<script src="{% static '/js/bootstrap-select.js' %}"></script>#}
+
+<script src="{% static '/js/jquery.scrollbar.min.js' %}"></script>
+
+
+{#<script src="{% static '/js/custom.js' %}"></script>#}
+
+
+<script src="{% static '/js/kendo/kendo.web.min.js' %}"></script>
+
+<script src="{% static '/js/kendo/kendo.culture.he-IL.min.js' %}"></script>
+
+<script src="{% static '/js/kendo/kendoExcelGrid.js' %}"></script>
+
+<script type="text/javascript">
+    var scroll_top = $(document).scrollTop();
+
+    if (scroll_top > 68) {
+        showFloatingMenue();
+        $('#floating-menu').slideDown();
+    }
+    $('#survey-dilalog').on('hidden.bs.modal', function () {
+
+
+        if ($('input:checkbox').is(':checked')) {
+            createCookie("dismissSurvey", true, 360);
+        }
+
+
+    });
+    $(document).bind('scroll', function (value) {
+        scroll_top = $(document).scrollTop();
+        if (scroll_top > 68) {
+            showFloatingMenue();
+            $('#floating-menu').slideDown();
+        }
+        else {
+            $('#floating-menu').slideUp()
+        }
+    });
+
+    function showFloatingMenue() {
+        if ($('#floating-menu').is(":visible") == false) {
+            $('#float-navbar').html($('#main-navbar').html());
+        }
+    }
+
+    {#initMessages();#}
+
+</script>
+
+

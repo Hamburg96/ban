@@ -112,4 +112,4 @@ uwsgi.xml
 *.pyc
 .DS_Store
 .idea
-
+README.md
